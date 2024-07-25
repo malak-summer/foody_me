@@ -1,0 +1,307 @@
+.cart-container {
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 10%;
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.cart-container h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.cart-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.cart-item-price {
+    float: right;
+    color: #000000;
+}
+
+.cart-item-options {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.cart-item-controls {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-item-quantity {
+    font-weight: bold;
+    background-color: #f1f1f1;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.cart-item-controls button {
+    padding: 5px 10px;
+    background-color: #ffc107;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cart-item-controls button:hover {
+    background-color: #28a745;
+}
+
+.cart-totals {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Left column is twice as wide as the right column */
+    gap: 10px; /* Space between columns */
+}
+
+.cart-total-row {
+    display: contents; /* Use grid cell without additional styling */
+}
+
+.cart-total-label {
+    font-weight: bold;
+    text-align: left;
+    justify-self: start; /* Aligns label to the start (left) */
+}
+
+.cart-total-value {
+    text-align: right;
+    justify-self: end; /* Aligns value to the end (right) */
+}
+
+.coupon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.coupon-input {
+    margin-left: 2rem;
+    width: 150px;
+    padding: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    margin-right: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.coupon-apply-button {
+    padding: 5px 10px;
+    background-color: #ffc107;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.coupon-apply-button:hover {
+    background-color: #28a745;
+}
+
+.checkout-button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-button:hover {
+    background-color: #218838;
+}
+
+/* New Styles for Customer Information Section */
+.customer-info {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 10px; /* Add spacing between items */
+    width: 100%; /* Ensure full width if needed */
+}
+
+.customer-info input,
+.customer-info textarea {
+    width: calc(100% - 20px); /* Full width minus padding */
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+.customer-info input:focus,
+.customer-info textarea:focus {
+    border-color: #28a745;
+    outline: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .cart-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .cart-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .cart-item-controls {
+        gap: 8px;
+    }
+
+    .cart-totals {
+        grid-template-columns: 1fr 1fr; /* Equal columns for totals */
+    }
+}
+
+@media (max-width: 992px) {
+    .cart-container {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5%;
+    }
+
+    .cart-container h2 {
+        font-size: 1.6rem;
+    }
+
+    .cart-item-price {
+        float: none;
+        text-align: right;
+    }
+
+    .cart-item-controls {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .coupon-input {
+        width: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cart-container {
+        width: 100%;
+        padding: 10px;
+        margin-top: 3%;
+    }
+
+    .cart-container h2 {
+        font-size: 1.4rem;
+    }
+
+    .cart-item {
+        padding: 8px;
+    }
+
+    .cart-item-controls {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 5px;
+    }
+
+    .coupon-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .coupon-input {
+        width: 80%;
+        margin: 10px 0;
+    }
+
+    .coupon-apply-button {
+        width: 100%;
+    }
+
+    .checkout-button {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .cart-container {
+        width: 100%;
+        padding: 5px;
+        margin-top: 2%;
+    }
+
+    .cart-container h2 {
+        font-size: 1.2rem;
+    }
+
+    .cart-item {
+        padding: 5px;
+    }
+
+    .cart-item-controls {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 3px;
+    }
+
+    .coupon-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .coupon-input {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .coupon-apply-button {
+        width: 100%;
+    }
+
+    .checkout-button {
+        padding: 8px;
+    }
+
+    .customer-info input,
+    .customer-info textarea {
+        width: 100%;
+    }
+}

@@ -1,0 +1,247 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* Background Image Blur */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    filter: blur(8px); /* Adjust the blur level */
+    z-index: -1; /* Place behind other content */
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #343a40;
+}
+
+.navbar .navbar-brand {
+    color: #ffc107;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navbar .nav-link {
+    color: white;
+    margin-right: 15px;
+    font-size: 1.1rem;
+}
+
+.navbar .nav-link.active {
+    color: #ffc107;
+    font-weight: bold;
+}
+
+.navbar .nav-link:hover {
+    color: #ffc107;
+    text-decoration: none;
+}
+
+.navbar .btn-warning {
+    color: #343a40;
+    background-color: #ffc107;
+    border: none;
+}
+
+.navbar .btn-warning:hover {
+    background-color: #e0a800;
+}
+
+/* Menu Section */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px; /* Add padding for better spacing */
+}
+
+.menu-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 350px; /* Fixed width */
+    height: 400px; /* Adjusted height */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px; /* Add margin for spacing between items */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation for hover effect */
+}
+
+.menu-item img {
+    width: 100%;
+    height: 250px; /* Fixed height for images */
+    object-fit: cover; /* Ensure image covers the area */
+    margin-bottom: 15px; /* Space between image and text */
+}
+
+.menu-item p {
+    padding: 10px 15px; /* Reduced padding for text */
+    font-size: 1.3rem; /* Larger text size */
+    font-weight: bolder;
+    margin: 0; /* Remove margin for uniform spacing */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center text vertically and horizontally */
+}
+
+.menu-item button {
+    width: 90%;
+    margin: 0 15px 15px; /* Adjust margins for consistent spacing */
+    padding: 12px; /* Add padding for button */
+    font-size: 1.1rem; /* Increase font size */
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    background-color: #28a745; /* Vibrant green color */
+    color: #fff; /* White text */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and scale */
+}
+
+.menu-item button:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+/* Hover Effect */
+.menu-item:hover {
+    transform: scale(1.05); /* Slightly enlarge the item on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer a {
+    color: #ffc107;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .navbar .navbar-brand {
+        font-size: 1.4rem;
+    }
+
+    .navbar .nav-link {
+        font-size: 1rem;
+    }
+
+    .menu-item {
+        width: 300px; /* Adjust width for medium screens */
+        height: 350px; /* Adjust height for medium screens */
+    }
+
+    .menu-item p {
+        font-size: 1.2rem; /* Adjust text size */
+    }
+
+    .menu-item button {
+        font-size: 1rem; /* Adjust button font size */
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar .navbar-brand {
+        font-size: 1.3rem;
+    }
+
+    .navbar .nav-link {
+        font-size: 0.9rem;
+        margin-right: 10px;
+    }
+
+    .menu-item {
+        width: 250px; /* Adjust width for smaller screens */
+        height: 300px; /* Adjust height for smaller screens */
+    }
+
+    .menu-item p {
+        font-size: 1rem; /* Adjust text size */
+    }
+
+    .menu-item button {
+        font-size: 0.9rem; /* Adjust button font size */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .navbar .nav-link {
+        font-size: 0.8rem;
+        margin-right: 8px;
+    }
+
+    .menu-item {
+        width: 100%; /* Full width for smaller screens */
+        height: auto; /* Adjust height */
+    }
+
+    .menu-item p {
+        font-size: 0.9rem; /* Adjust text size */
+    }
+
+    .menu-item button {
+        font-size: 0.8rem; /* Adjust button font size */
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar .navbar-brand {
+        font-size: 1.1rem;
+    }
+
+    .navbar .nav-link {
+        font-size: 0.7rem;
+        margin-right: 5px;
+    }
+
+    .menu-item {
+        width: 100%; /* Full width for mobile */
+        height: auto; /* Adjust height */
+    }
+
+    .menu-item p {
+        font-size: 0.8rem; /* Adjust text size */
+    }
+
+    .menu-item button {
+        font-size: 0.7rem; /* Adjust button font size */
+    }
+
+    footer {
+        padding: 15px 0; /* Adjust footer padding */
+    }
+
+    footer a {
+        font-size: 0.9rem;
+        margin: 0 5px;
+    }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Cart</title>
+    <link>    <link rel="stylesheet" href="../styles/cart.css"/>
+</head>
+<style>
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/cart.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);
+    z-index: -1; 
+    pointer-events: none; 
+    background-attachment: fixed;
+}
+
+</style>
+<body>
+    <div class="cart-container">
+        <h2>Your cart</h2>
+        <div id="cart-items">
+            <!-- Cart items will be dynamically inserted here -->
+        </div>
+
+        <div class="cart-totals">
+            <div class="cart-total-label">Your cart subtotal:</div>
+            <div class="cart-total-value" id="cart-subtotal">$0.00</div>
+            <div class="cart-total-label">Shipping fees:</div>
+            <div class="cart-total-value" id="cart-shipping">$0.00</div>
+            <div class="cart-total-label">Discount through applied coupons:</div>
+            <div class="cart-total-value" id="cart-discount">$0.00</div>
+
+            <div class="cart-total-label">Total:</div>
+            <div class="cart-total-value" id="cart-total">$0.00</div>
+        </div>
+
+        <div class="coupon-container">
+            <label for="coupon-code">Apply coupon</label>
+            <input type="text" id="coupon-code" class="coupon-input">
+            <button class="coupon-apply-button">Apply</button>
+        </div>
+
+        <div class="customer-info">
+            <input type="email" id="customer-email" placeholder="Email" required>
+            
+            <input type="tel" id="customer-phone" placeholder="Phone number" required>
+            
+            <textarea id="customer-address" placeholder="Address" rows="3" required></textarea>
+        </div>
+
+        <button class="checkout-button">Checkout</button>
+    </div>
+    <script src="../js/cart.js"></script>
+</body>
+</html>

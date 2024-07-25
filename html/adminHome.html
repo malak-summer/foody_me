@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Tables</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/adminHome.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Data Management</h1>
+
+        <!-- Coupons Table -->
+        <div class="table-responsive mb-5">
+            <h2>Coupons</h2>
+            <table class="table table-hover table-striped" id="couponsTable">
+                <thead>
+                    <tr>
+                        <th>Code</th>
+                        <th>Expiry Date</th>
+                        <th>Usage Limit</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <div class="d-flex justify-content-center center">
+                <button class="btn btn-primary mt-3" onclick="addCouponRow()">+ Add Coupon</button>
+            </div>
+        </div>
+
+        <!-- Menu Items Table -->
+        <div class="table-responsive mb-5">
+            <h2>Menu Items</h2>
+            <table class="table table-hover table-striped" id="menuItemsTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Image</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <div class="d-flex justify-content-center center">
+            <button class="btn btn-primary mt-3 center" onclick="addMenuItemRow()">+ Add Menu Item</button>
+            </div>
+        </div>
+
+        <!-- Orders Table -->
+        <div class="table-responsive mb-5">
+            <h2>Orders</h2>
+            <!-- Status Filter -->
+            <div class="mb-3 center">
+                <label for="statusFilter" class="form-label">Filter by Status:</label>
+                <select id="statusFilter" class="form-control" onchange="filterOrders()">
+                    <option value="">All</option>
+                    <option value="pending">Pending</option>
+                    <option value="validated">Validated</option>
+                </select>
+            </div>
+            <table class="table table-hover table-striped" id="ordersTable">
+                <thead>
+                    <tr>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Address</th>
+                        <th>Cart Items</th>
+                        <th>Total</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.2.0/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/adminHome.js"></script>
+</body>
+</html>

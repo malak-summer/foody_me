@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Successful</title>
+    <link rel="stylesheet" href="../styles/order_successful.css">
+    <script>
+        // Countdown timer function
+        function startCountdown() {
+            let timeLeft = 10; // seconds
+            const timerElement = document.getElementById('timer');
+            const interval = setInterval(() => {
+                timeLeft--;
+                timerElement.innerText = timeLeft;
+                if (timeLeft <= 0) {
+                    clearInterval(interval);
+                    window.location.href = 'home.html';
+                }
+            }, 1000);
+        }
+
+        // Start the countdown when the page loads
+        window.onload = startCountdown;
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Thank You!</h1>
+            <p>Your order has been placed successfully.</p>
+            <p>You will be redirected to the home page in <span id="timer">10</span> seconds.</p>
+            <button onclick="window.location.href='home.html'">Go to Home Page Now</button>
+        </div>
+    </div>
+</body>
+</html>

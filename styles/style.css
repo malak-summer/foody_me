@@ -1,0 +1,64 @@
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+  }
+  
+  .btn-outline-warning {
+    color: #ffffff;
+    border-color: #ffcd39;
+  }
+  
+  .btn-outline-warning:hover {
+    background-color: #ffcd39;
+    color: #343a40;
+  }
+  
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .gallery .demo {
+    margin: 15px;
+    text-align: center;
+  }
+  
+  .gallery .demo img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .gallery .demo p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  
+  .gallery .demo button {
+    background-color: #343a40;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .gallery .demo button:hover {
+    background-color: #ffcd39;
+    color: #343a40;
+  }
+  
+  #cart-count {
+    font-size: 0.8rem;
+    color: #ffffff;
+  }
+  
+  .badge {
+    font-size: 0.75rem;
+    padding: 3px 6px;
+    line-height: 1;
+    border-radius: 10px;
+  }
+  

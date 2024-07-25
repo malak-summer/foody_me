@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Foody</title>
+  <!-- External Stylesheets -->
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="../styles/home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <!-- Navigation Section -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand logo" href="home.html"><i class="fas fa-utensils"></i> Foody</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-hamburger"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav m-auto my-2 my-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="menu.html">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+        <div class="d-flex align-items-center">
+          <!-- Order Button -->
+          <form class="d-flex">
+            <button type="button" class="btn btn-warning" onclick="redirectToOrder()">Order Now</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Carousel and Home Section -->
+  <section>
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../img/Burger.jpg" class="d-block w-100" alt="Halloumi Burgers">
+        </div>
+        <div class="carousel-item">
+          <img src="../img/Pizza.jpg" class="d-block w-100" alt="Pizza">
+        </div>
+        <div class="carousel-item">
+          <img src="../img/Juice.jpg" class="d-block w-100" alt="Green Juice">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+      <div class="home">
+        <h1>Your Favorite Place</h1>
+        <!-- Centered Order Button -->
+        <button class="order-button" onclick="redirectToOrder()">Order Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-4 bg-dark text-white">
+    <p>&copy; 2024 Foody. All Rights Reserved.</p>
+    <p>
+      Follow us on
+      <a href="#" class="text-warning"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="text-warning"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="text-warning"><i class="fab fa-instagram"></i></a>
+    </p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="food.js"></script>
+  <script>
+    function redirectToOrder() {
+  window.location.href = 'menu.html';
+}
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
