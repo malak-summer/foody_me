@@ -197,7 +197,8 @@ function saveMenuItemRow(button) {
     .then(result => {
         if (result.success) {
             alert('Menu item added successfully!');
-            location.reload(); // Reload the page to update the table
+            loadTableData('menu_items', 'menuItemsTable');
+            ; 
         } else {
             alert('Failed to add menu item: ' + result.error);
         }
@@ -215,7 +216,12 @@ function deleteRow(table, id) {
         .then(result => {
             if (result.status === 'success') {
                 alert('Item deleted successfully');
-                loadTableData(table, `${table}Table`); // Reload the table data
+                if (table=='menu_items'){
+                    loadTableData('menu_items', `menuItemsTable`)
+                }
+                else{
+                    loadTableData(table, `${table}Table`)
+                }
             } else {
                 alert('Delete failed: ' + result.message);
             }
@@ -253,7 +259,7 @@ function addCouponRow() {
 }
 
 function addMenuItemRow() {
-    const tableBody = document.querySelector('#menuItemsTable tbody');
+    const tableBody = document.getElementById('menuItemsTable').querySelector('tbody');
     const newRow = document.createElement('tr');
     newRow.innerHTML = `
         <td><input type="text" class="form-control" placeholder="Name"></td>
