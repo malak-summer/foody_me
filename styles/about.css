@@ -157,14 +157,6 @@ footer a:hover {
 
 /* Responsive Styles */
 @media (max-width: 1200px) {
-    .navbar .navbar-brand {
-        font-size: 1.3rem;
-    }
-
-    .navbar .nav-link {
-        font-size: 1rem;
-        margin-right: 10px;
-    }
 
     .about {
         padding: 40px;
@@ -188,14 +180,7 @@ footer a:hover {
 }
 
 @media (max-width: 992px) {
-    .navbar .navbar-brand {
-        font-size: 1.2rem;
-    }
 
-    .navbar .nav-link {
-        font-size: 0.9rem;
-        margin-right: 8px;
-    }
 
     .about {
         padding: 30px;
@@ -224,14 +209,7 @@ footer a:hover {
 }
 
 @media (max-width: 768px) {
-    .navbar .navbar-brand {
-        font-size: 1.1rem;
-    }
 
-    .navbar .nav-link {
-        font-size: 0.8rem;
-        margin-right: 5px;
-    }
 
     .about {
         padding: 20px;
@@ -260,14 +238,6 @@ footer a:hover {
 }
 
 @media (max-width: 576px) {
-    .navbar .navbar-brand {
-        font-size: 1rem;
-    }
-
-    .navbar .nav-link {
-        font-size: 0.7rem;
-        margin-right: 3px;
-    }
 
     .about {
         padding: 15px;
