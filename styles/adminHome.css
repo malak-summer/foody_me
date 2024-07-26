@@ -137,3 +137,9 @@ input[type="email"] {
     align-items: center;
     justify-content: center
 }
+
+.logout{
+    display: flex;
+    align-items: center;
+    justify-content: right
+}
