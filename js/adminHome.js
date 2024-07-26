@@ -16,6 +16,26 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 });
 
+//logout
+function logout() {
+    fetch('../php/adminControl/logout.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            window.location.href = '../html/login.html'; // Redirect to login after logout
+        } else {
+            alert('Logout failed');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
+
+
 
 //Data and control functions
 
